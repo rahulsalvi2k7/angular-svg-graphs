@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "angular-svg-graphs-library": [
+        "dist/angular-svg-graphs-library"
+      ],
+      "angular-svg-graphs-library/*": [
+        "dist/angular-svg-graphs-library/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
