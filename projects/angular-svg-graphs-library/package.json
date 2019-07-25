@@ -1,6 +1,16 @@
 {
   "name": "angular-svg-graphs-library",
   "version": "0.0.1",
+  "description": "An angular library tp create graphs using SVG",
+  "author": "Rahul salvi",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rahulsalvi2k7/angular-svg-graphs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rahulsalvi2k7/angular-svg-graphs/issues"
+  },
+  "homepage": "https://github.com/rahulsalvi2k7/angular-svg-graphs",
   "peerDependencies": {
     "@angular/common": "^8.1.2",
     "@angular/core": "^8.1.2"
