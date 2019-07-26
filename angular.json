@@ -116,7 +116,7 @@
         }
       }
     },
-    "AngularSvgGraphsLibrary": {
+    "angular-svg-graphs-library": {
       "projectType": "library",
       "root": "projects/angular-svg-graphs-library",
       "sourceRoot": "projects/angular-svg-graphs-library/src",
