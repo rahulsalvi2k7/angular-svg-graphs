@@ -7,21 +7,21 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AsgBarChartComponent implements OnInit {
 
-  @Input() data = [];
-  @Input() barBorderColor = "#fff";
-  @Input() barBorderStrokeWidth = "0.2";
-  @Input() barFill = "#00458a";  
-  @Input() barWidth = 20;
-  @Input() textFill = "white";
-  @Input() textFontSize = "5";
-  @Input() xAxisShow    = "true";
-  @Input() xAxisStroke  = "#ccc";
-  @Input() xAxisStrokeWidth = "0.5";
-  @Input() yAxisShow = "true";
-  @Input() yAxisStroke  = "#ccc";
-  @Input() yAxisStrokeWidth = "0.5";
+  @Input() public data = [];
+  @Input() public barBorderColor = "#fff";
+  @Input() public barBorderStrokeWidth = "0.2";
+  @Input() public barFill = "#00458a";  
+  @Input() public barWidth = 20;
+  @Input() public textFill = "white";
+  @Input() public textFontSize = "5";
+  @Input() public xAxisShow    = "true";
+  @Input() public xAxisStroke  = "#ccc";
+  @Input() public xAxisStrokeWidth = "0.5";
+  @Input() public yAxisShow = "true";
+  @Input() public yAxisStroke  = "#ccc";
+  @Input() public yAxisStrokeWidth = "0.5";
   
-  private bars = [];
+  public bars = [];
 
   constructor() { }
 

@@ -1,39 +1,40 @@
-<svg    width="25em"
-		height="20em"
-		viewBox="-15 -5 230 425"
-		preserveAspectRatio="xMidYMid slice"
-		class="w3-border w3-round">
-	<g transform="matrix(1 0 0 -1 0 280)">
-		<ng-container *ngFor="let dt of bars; let i = index">
-			<rect   [attr.width]="barWidth" 
-					[attr.height]="dt.y" 
-					[attr.x]="dt.x" 
-					[attr.fill]="barFill"
-					[attr.stroke]="barBorderColor"
-					[attr.stroke-width]="barBorderStrokeWidth" />
-			<text   [attr.x]="dt.x" 
-					[attr.y]="dt.y" 
-					[attr.fill]="textFill"
-					[attr.font-size]="textFontSize"
-					[attr.transform]="dt.textTransform">{{dt.y}}</text>
-		</ng-container>
-		<ng-container *ngIf="xAxisShow">
-			<line   id="xAxis"
-					x1="0" 
-					y1="0" 
-					x2="205" 
-					y2="0"
-					[attr.stroke]="xAxisStroke" 
-					[attr.stroke-width]="xAxisStrokeWidth"/>
-		</ng-container>
-		<ng-container *ngIf="yAxisShow">
-		<line   id="yAxis"
-				x1="0" 
-				y1="0" 
-				x2="0" 
-				y2="150"
-				[attr.stroke]="yAxisStroke" 
-				[attr.stroke-width]="yAxisStrokeWidth"/>
-		</ng-container>
-	</g>
-</svg>
+	<svg    width="25em"
+			height="20em"
+			viewBox="-15 -5 230 425">
+		<g transform="matrix(1 0 0 -1 0 280)">
+			<ng-container *ngFor="let dt of bars;">
+				<rect   [attr.width]="barWidth" 
+						[attr.height]="dt.y" 
+						[attr.x]="dt.x" 
+						[attr.fill]="barFill"
+						[attr.stroke]="barBorderColor"
+						[attr.stroke-width]="barBorderStrokeWidth">
+				</rect>		
+				<text   [attr.x]="dt.x" 
+						[attr.y]="dt.y" 
+						[attr.fill]="textFill"
+						[attr.font-size]="textFontSize"
+						[attr.transform]="dt.textTransform">{{ dt.y }}</text>
+			</ng-container>
+			<ng-container *ngIf="xAxisShow">
+				<line   id="xAxis"
+						x1="0" 
+						y1="0" 
+						x2="205" 
+						y2="0"
+						[attr.stroke]="xAxisStroke" 
+						[attr.stroke-width]="xAxisStrokeWidth">
+				</line>
+			</ng-container>
+			<ng-container *ngIf="yAxisShow">
+				<line   id="yAxis"
+						x1="0" 
+						y1="0" 
+						x2="0" 
+						y2="150"
+						[attr.stroke]="yAxisStroke" 
+						[attr.stroke-width]="yAxisStrokeWidth">
+				</line>
+			</ng-container>
+		</g>
+	</svg>
