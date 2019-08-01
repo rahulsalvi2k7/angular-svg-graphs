@@ -1,0 +1,41 @@
+<div class="w3-container">
+    <svg    width="100%"
+            height="20em"
+            viewBox="-15 20 300 400"
+            preserveAspectRatio="xMidYMid slice"
+            class="w3-border w3-round">
+        <g transform="matrix(1 0 0 -1 0 280)">
+            <polyline   fill="none"
+                        [attr.points]="pointsString"                        
+                        [attr.stroke]="stroke"
+                        [attr.stroke-width]="strokeWidth"/>
+            <ng-container *ngIf="dataLabelShow">
+                <ng-container *ngFor="let dt of dataPoints">
+                    <text   [attr.x]="dt.x" 
+                            [attr.y]="dt.y" 
+                            [attr.fill]="textFill"
+                            [attr.font-size]="textFontSize"
+                            [attr.transform]="dt.textTransform">{{ dt.y | number : '1.0-0' }}</text>
+                </ng-container>
+            </ng-container>
+            <ng-container *ngIf="xAxisShow">
+                <line   id="xAxis"
+                        x1="0" 
+                        y1="0" 
+                        x2="250" 
+                        y2="0"
+                        [attr.stroke]="xAxisStroke" 
+                        [attr.stroke-width]="xAxisStrokeWidth"/>
+            </ng-container>
+            <ng-container *ngIf="yAxisShow">
+            <line   id="yAxis"
+                    x1="0" 
+                    y1="0" 
+                    x2="0" 
+                    y2="125"
+                    [attr.stroke]="yAxisStroke" 
+                    [attr.stroke-width]="yAxisStrokeWidth"/>
+            </ng-container>
+        </g>
+    </svg>
+</div>
